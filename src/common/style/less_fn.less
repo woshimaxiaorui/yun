@@ -1,0 +1,44 @@
+//宽度适配设置（rem）
+.w(@px){
+	width: unit(@px/@adaptive,rem);
+}
+//设置适配高度
+.h(@px){
+	height:unit(@px/@adaptive,rem);
+}
+// 设置适配行高
+.line-h(@px){
+	line-height:unit(@px/@adaptive,rem);
+}
+// 设置边框 常用于查看元素占位
+.border(){
+	border:1px solid red;
+}
+//设置适配padding值
+.padding(@top,@right,@bottom,@left){
+	padding: unit(@top/@adaptive,rem) unit(@right/@adaptive,rem) unit(@bottom/@adaptive,rem) unit(@left/@adaptive,rem);
+}
+//设置适配margin值
+.margin(@top,@right,@bottom,@left){
+	margin: unit(@top/@adaptive,rem) unit(@right/@adaptive,rem) unit(@bottom/@adaptive,rem) unit(@left/@adaptive,rem);
+}
+
+
+//设置top，right，bottom，left适配偏移值
+.top(@px){
+	top:unit(@px/@adaptive,rem);
+}
+.right(@px){
+	right:unit(@px/@adaptive,rem);
+}
+.bottom(@px){
+	bottom:unit(@px/@adaptive,rem);
+}
+.left(@px){
+	left:unit(@px/@adaptive,rem);
+}
+
+// 设置适配圆角弧度
+.b-radio(@px){
+	border-radius: unit(@px/@adaptive,rem);
+}
