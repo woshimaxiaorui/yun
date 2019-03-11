@@ -1,7 +1,7 @@
 <template>
-	<view>
-		
-	</view>
+	<div class="home">
+		我是父页面
+	</div>
 </template>
 
 <script>
