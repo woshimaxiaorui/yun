@@ -40,6 +40,10 @@ export default new Router({
 					path : 'contactUs',
 					name : 'ContactUs',
 					component : ContactUs
+				},
+				{
+					path: '**',
+					redirect:"/home"
 				}
 			]
 		},

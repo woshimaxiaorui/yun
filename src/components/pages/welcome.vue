@@ -14,7 +14,7 @@
 		data() {
 			return {
 				showpoi: false,
-				toIndex: '/home'
+				toIndex: '/home/index'
 			};
 		},
 		methods: {
