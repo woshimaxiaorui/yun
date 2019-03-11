@@ -6,6 +6,7 @@ import Index from '@/components/pages/index/index'
 import ClassificationShow from '@/components/pages/classificationShow/classificationShow'
 import OurServes from '@/components/pages/ourServes/ourServes'
 import ContactUs from '@/components/pages/contactUs/contactUs'
+import Banner from '@/components/common/banner'
 
 Vue.use(Router)
 
