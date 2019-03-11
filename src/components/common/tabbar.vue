@@ -12,22 +12,22 @@
 			return {
 				tabs:[
 					{
-						path:'index',
+						path:'/home/index',
 						name:'Index',
 						text:'首页'
 					},
 					{
-						path:'classificationShow',
+						path:'/home/classificationShow',
 						name:'ClassificationShow',
 						text:'分类'
 					},
 					{
-						path:'ourSever',
+						path:'/home/ourServes',
 						name:'OurSever',
 						text:'服务'
 					},
 					{
-						path:'contactUs',
+						path:'/home/contactUs',
 						name:'ContactUs',
 						text:'留言'
 					}

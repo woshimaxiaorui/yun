@@ -1,7 +1,6 @@
 <template>
 	<div class="home">
 		我是父页面
-		
 		<router-view></router-view>
 		<Tabbar></Tabbar>
 	</div>
