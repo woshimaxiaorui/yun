@@ -56,7 +56,7 @@
 			color: rgba(255, 255, 255, 0.9);
 			border: 2px solid #666;
 			text-align: center;
-			
+			.b-radio(5);
 		}
 	}
 </style>
