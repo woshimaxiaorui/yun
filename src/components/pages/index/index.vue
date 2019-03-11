@@ -1,6 +1,6 @@
 <template>
 	<div class="index">
-		我是首页heheheheh
+		我是首页aaaa
 	</div>
 </template>
 
