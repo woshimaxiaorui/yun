@@ -14,7 +14,7 @@
 		data() {
 			return {
 				showpoi: false,
-				toIndex: '/home'
+				toIndex: '/home/index'
 			};
 		},
 		methods: {
@@ -26,9 +26,6 @@
 			}
 		},
 		mounted() {
-			// 			setTimeout(()=>{
-			// 				this.showidx();
-			// 			},1000)
 			this.showidx();
 		}
 	}
@@ -36,10 +33,6 @@
 
 <style lang="less">
 	@import '../../common/style/index.less';
-
-	* {
-		position: relative;
-	}
 
 	.welcome {
 		width: 100%;
@@ -63,7 +56,7 @@
 			color: rgba(255, 255, 255, 0.9);
 			border: 2px solid #666;
 			text-align: center;
-			
+			.b-radio(5);
 		}
 	}
 </style>

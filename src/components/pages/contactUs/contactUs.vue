@@ -1,6 +1,6 @@
 <template>
 	<div class="contact-us">
-		我是留言板（联系我们）
+		我是留言板（联系我们）quqeiuhqiuefchiuqhfcu
 	</div>
 </template>
 
