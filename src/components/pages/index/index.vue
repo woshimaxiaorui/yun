@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import Banner from '@/components/common/banner'
 	export default {
 		data() {
 			return {
