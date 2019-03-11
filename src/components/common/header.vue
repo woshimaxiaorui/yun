@@ -1,8 +1,8 @@
 <template>
 	<div class="head">
-		<p class="goUp">
+		<!-- <p class="goUp">
 			《
-		</p>
+		</p> -->
 		<p class="logo">
 			<img src="../../assets/img/logoBottom.png" alt="">
 		</p>
@@ -29,10 +29,24 @@
 		.h(44);
 		background:@hd-color;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		font-size: @f-size-l;
-		.goUp{
-			.w(50);
+		.line-h(44);
+		.b-radio(5);
+// 		.goUp{
+// 			.w(20);
+// 			.padding(0,10,0,10);
+// 			color: @bg-color;
+// 		}
+		.logo{
+			flex: 1;
+			align-self: center;
+			img{
+				.h(22);
+				display: block;
+				margin:0 auto ;
+			}
 		}
 	}
+	*{}
 </style>

@@ -50,5 +50,10 @@
 		font-size:@f-size-l;
 		.line-h(50);
 		.b-radio(10);
+		background: @hd-color;
+		color: @bg-color;
+	}
+	.selected{
+		color: yellow;
 	}
 </style>
