@@ -26,9 +26,6 @@
 			}
 		},
 		mounted() {
-			// 			setTimeout(()=>{
-			// 				this.showidx();
-			// 			},1000)
 			this.showidx();
 		}
 	}
@@ -36,10 +33,6 @@
 
 <style lang="less">
 	@import '../../common/style/index.less';
-
-	* {
-		position: relative;
-	}
 
 	.welcome {
 		width: 100%;
