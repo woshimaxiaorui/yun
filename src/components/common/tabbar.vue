@@ -43,12 +43,12 @@
 		position: fixed;
 		.bottom(0);
 		.w(375);
-		.h(50);
-		border-top:1px solid #ccc;
+		.h(40);
+		
 		display:flex;
 		justify-content: space-around;
 		font-size:@f-size-m;
-		.line-h(50);
+		.line-h(40);
 		.b-radio4(5,5,0,0);
 		background: @hd-color;
 		color: @bg-color;

@@ -12,7 +12,8 @@
 					<dt>-- {{item.title}} --</dt>
 					<dd>
 						<div class="demo" v-for=" (it,i) in groupList[index].list" :key="i">
-							<p class="it-img">
+							
+							<p class="it-img" @click="showDemo(it.href)">
 								<img :src=" '../../../static/img/' + it.img" :alt="it.name">
 							</p>
 							<p class="it-name">
@@ -57,6 +58,18 @@
 				click : true
 			});
 			// scroll.on('scroll',this.onscroll);
+		},
+		methods :{
+			showDemo(href){
+				console.log(href)
+				this.$router.push({
+					name : 'ShowDemoInfo',
+					params : {
+						href
+					}
+				})
+			}
+				
 		}
 		
 		
