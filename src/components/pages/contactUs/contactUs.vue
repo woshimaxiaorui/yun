@@ -1,6 +1,8 @@
 <template>
 	<div class="contact-us">
-		我是留言板（联系我们）quqeiuhqiuefchiuqhfcu
+		<div id="dsd">
+			dwqd
+		</div>
 	</div>
 </template>
 
@@ -14,6 +16,14 @@
 	}
 </script>
 
-<style>
-
+<style lang="less" scope>
+	@import '~style/index.less';
+	.contact-us{
+		position: fixed;
+		.top(44); .right(0); .bottom(50); .left(0);
+		#dsd{
+			.w(12);.h(76);
+			background: @bg-color;
+		}
+	}
 </style>

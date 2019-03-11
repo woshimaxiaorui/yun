@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-import Axios from 'axios'
+import Axios from 'axios' 
 
 Vue.prototype.$axios = Axios
 
