@@ -5,7 +5,7 @@
 				<li>
 					<input type="hidden"/>
 				</li>
-				<li class="cu-us">用户名：<input type="text" v-model="username"/></li>
+				<li class="cu-us">用户名：<input type="text" v-model="username" /></li>
 				<li>
 					<textarea 
 						class="cu-txt" 
@@ -24,7 +24,6 @@
 					<ul>
 						<li class="cut-time">{{items.id}}</li>
 						<li class="cut-act">
-							<span>修改</span>
 							<span @click="deletecomment(items.id)">删除</span>
 						</li>
 					</ul>
@@ -54,6 +53,7 @@
 				list.unshift(comment);
 				localStorage.setItem('cmts',JSON.stringify(list));
 				this.username = this.content = null;
+				this.list = JSON.parse(localStorage.getItem('cmts') || '[]');
 				this.$emit('func');
 			},
 			loadcomment(){
@@ -65,8 +65,8 @@
 				for(let i=0;i<list.length;i++){
 					if(list[i].id == id){
 						list.splice(i,1);
+						localStorage.setItem('cmts',JSON.stringify(list));
 						this.list = list;
-						console.log(i)
 						console.log(this.list)
 					}
 				}
@@ -97,23 +97,25 @@
 	@import '~style/index.less';
 	.contact-us{ position: fixed; .top(44); .right(0); .bottom(50); .left(0);
 		li{list-style: none;}
-		.cu-bbs{ .w(375); .h(200); box-sizing: border-box; .padding(10,20,10,20);
+		.cu-bbs{ .w(375); .h(200); box-sizing: border-box; .padding(10,20,10,20);border-bottom: 1px solid #999;
 			.cu-txt{.w(335); .h(100); border: 1px solid #999; font-size: @f-size-l;}
-			.cu-us{ .h(35); font-size: @f-size-l; .line-h(35);}
+			.cu-us{ .h(35); font-size: @f-size-l; .line-h(35); .margin(0,0,5px,0);
+				input{ .h(20); border: 1px solid #999; background: rgba(255,255,255,0.3);}
+			}
 			.cu-btn{ 
-				span{ .w(75); .h(32); background: #42B983; float: right; font-size: @f-size-l; text-align: center; .line-h(32);}
+				span{ .w(75); .h(32); background: #0454F6; color: #fff; float: right; font-size: @f-size-l; text-align: center; .line-h(32);}
 			}
 		}
 		.cu-info{
 			position: fixed; .top(244); .right(0); .bottom(50); .left(0);
-			overflow: hidden; background: #FFFF00;
+			overflow: hidden; .padding(15px,0,0,0);
 			.cui-con{
-				.cuic-tnt{ .w(375); border: 5px solid #42B983; box-sizing: border-box; .padding(0,12px,0,12px);
-					.cut-user{ .w(375); .h(35); font-size: @f-size-l; .line-h(35);}
-					.cut-cont{}
-					ul{ .h(35); font-size: @f-size-l; .line-h(35);
-						.cut-time{float: left;}
-						.cut-act{float: right;}
+				.cuic-tnt{ .w(375); border-bottom: 1px dashed #999; box-sizing: border-box; .padding(0,12px,0,12px); .margin(0,0,10px,0);
+					.cut-user{ .w(375); .h(35); font-size: @f-size-sm; .line-h(35); color: #666;}
+					.cut-cont{ font-size: @f-size-l; color: #000;}
+					ul{ .h(35); .line-h(35);
+						.cut-time{float: left; font-size: @f-size-s; color: #ccc;}
+						.cut-act{float: right; font-size: @f-size-sm; color: #666;}
 					}
 				}
 			}
