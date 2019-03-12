@@ -5,7 +5,7 @@
 				<li>
 					<input type="hidden"/>
 				</li>
-				<li class="cu-us">用户名：<input type="text" v-model="username" /></li>
+				<li class="cu-us">USERNAME：<input type="text" v-model="username" /></li>
 				<li>
 					<textarea 
 						class="cu-txt" 
@@ -13,18 +13,18 @@
 					>
 					</textarea>
 				</li>
-				<li class="cu-btn"><span @click="postcomment">留言</span></li>
+				<li class="cu-btn"><span @click="postcomment">COMMENT</span></li>
 			</ul>
 		</div>
 		<div class='cu-info' >
 			<div class="cui-con" @upda='params()'>
 				<div class="cuic-tnt" v-for="(items,index) in list" :key='index'>
-					<div class="cut-user">用户:{{items.user}}</div>
+					<div class="cut-user">USER:{{items.user}}</div>
 					<div class="cut-cont"> {{items.content}}</div>
 					<ul>
 						<li class="cut-time">{{items.id}}</li>
 						<li class="cut-act">
-							<span @click="deletecomment(items.id)">删除</span>
+							<span @click="deletecomment(items.id)">DELETE</span>
 						</li>
 					</ul>
 				</div>
@@ -103,7 +103,7 @@
 				input{ .h(20); border: 1px solid #999; background: rgba(255,255,255,0.3);}
 			}
 			.cu-btn{ 
-				span{ .w(75); .h(32); background: #0454F6; color: #fff; float: right; font-size: @f-size-l; text-align: center; .line-h(32);}
+				span{ .w(75); .h(28); background: #0454F6; color: #fff; float: right; font-size: @f-size-s; text-align: center; .line-h(28);}
 			}
 		}
 		.cu-info{
