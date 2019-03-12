@@ -5,7 +5,7 @@
             v-for="(item,index) in list"
             :key='index'
         >
-            <img :src="item.picUrl" class="b-img">
+            <img :src="item.picUrl" class="b-img" @click='gotopage(item.href)'>
         </swiper-slide>
         <!-- Optional controls -->
         <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
@@ -43,6 +43,15 @@ export default {
       swiper(){
         return this.$refs.mySwiper.swiper
       }
+    },
+    methods:{
+        gotopage(href){
+            console.log(href);
+            this.$router.push({
+                name:'ShowDemoInfo',
+                params:{href}
+            })
+        }
     },
     created(){
     //                                                                        // g_tk=1928093487&inCharset=utf-8&outCharset=utf-8&notice=0&format=jsonp&channel=singer&page=list&key=all_all_all&pagesize=100&pagenum=1&hostUin=0&needNewCode=0&platform=yqq&jsonpCallback=jp1

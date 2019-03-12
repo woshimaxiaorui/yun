@@ -38,7 +38,7 @@
 						<div class="anli-list" v-for="(item,index) in anlist"
 							:key="index"
 						>
-							<img :src="item.img" class="anli-img" >
+							<img :src="item.img" class="anli-img" @click="gopage(item.href)">
 							<span>{{item.txt}}</span>
 						</div>	
 						<!-- </mt-cell> -->
@@ -47,7 +47,7 @@
 						<div class="anli-list" v-for="(item,index) in anlist1"
 							:key="index"
 						>
-							<img :src="item.img" class="anli-img" >
+							<img :src="item.img" class="anli-img" @click="gopage(item.href)">
 							<span>{{item.txt}}</span>
 						</div>	
 					</mt-tab-container-item>
@@ -55,7 +55,7 @@
 						<div class="anli-list" v-for="(item,index) in anlist2"
 							:key="index"
 						>
-							<img :src="item.img" class="anli-img" >
+							<img :src="item.img" class="anli-img" @click="gopage(item.href)">
 							<span>{{item.txt}}</span>
 						</div>	
 					</mt-tab-container-item>
@@ -107,9 +107,9 @@ import Lunbo from './lunbo'
 				],
 				activelist:[{'城市':'tab-container1','景观':'tab-container2','航拍':'tab-container3'}],
 				active:'tab-container1',
-				anlist:[{img:'static/img/city1.jpg',txt:'本色摄影'},{img:'static/img/city2.png',txt:'华能贵诚信托'},{img:'static/img/city3.jpg',txt:'山东费县'},{img:'static/img/city4.png',txt:'聚焦儿童摄影'}],
-				anlist1:[{img:'static/img/fj1.png',txt:'颐和园'},{img:'static/img/fj2.png',txt:'青海坎布拉景区'},{img:'static/img/fj3.jpg',txt:'起凤小学测试'},{img:'static/img/fj4.jpg',txt:'达拉特旗'}],
-				anlist2:[{img:'static/img/hp1.jpg',txt:'青海'},{img:'static/img/hp2.jpg',txt:'葛各庄全景'},{img:'static/img/hp3.jpg',txt:'西狄头村全景'},{img:'static/img/hp4.jpg',txt:'胡各庄全景'}],
+				anlist:[{img:'static/img/city1.jpg',txt:'本色摄影',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=5c3e4753f80f2c1644c15bafa4f584a5'},{img:'static/img/city2.png',txt:'华能贵诚信托',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=92a3d72b5563dc2044fbfba5f4a40807'},{img:'static/img/city3.jpg',txt:'山东费县',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=ad50260b6c43ee1192c14fd68b041b9a'},{img:'static/img/city4.png',txt:'聚焦儿童摄影',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=b98976b4796903d3fcd92376ff7b3575'}],
+				anlist1:[{img:'static/img/fj1.png',txt:'颐和园',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=99e1ad12f4f22630f5cdf86f2a8b2142'},{img:'static/img/fj2.png',txt:'青海坎布拉景区',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=6e4f871422d3e5a94e1ca5c2dc373793'},{img:'static/img/fj3.jpg',txt:'起凤小学测试',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=5d81360c3656ef806b67a241690abb84'},{img:'static/img/fj4.jpg',txt:'达拉特旗',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=a03fd78f2698e9967fa13a0aa5b11c95'}],
+				anlist2:[{img:'static/img/hp1.jpg',txt:'青海',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=42896ddb0d5414d3fe27a3509257247e'},{img:'static/img/hp2.jpg',txt:'葛各庄全景',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=2a7515d7e2be9f507a2410e5093cff2a'},{img:'static/img/hp3.jpg',txt:'西狄头村全景',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=942be3db1a4ac4022e74e93a7a32cfed'},{img:'static/img/hp4.jpg',txt:'胡各庄全景',href:'http://www.yunjing720.com/index.php?s=tour/index/index&tid=8c93af276cddde1716ed21afa7e02644'}],
 				videoshow:true
 			}
 		},
@@ -127,11 +127,22 @@ import Lunbo from './lunbo'
 				// console.log(this.$refs.videos)
 				this.$refs.videos.style.display = 'block'
 				return this.videoshow = !this.videoshow
+			},
+			gopage(href){
+				// console.log(href)
+				this.$router.push({
+					name : 'ShowDemoInfo',
+					params : {
+						href
+					}
+				})
 			}
 		},
 		mounted(){
 			setTimeout(()=>{
-				this.scroll = new BScroll('#wrapper')
+				this.scroll = new BScroll('#wrapper',{
+					click:true
+				})
 			},500)
 		}
 	}
@@ -142,7 +153,7 @@ import Lunbo from './lunbo'
 .index{
 	position: fixed;
 	.top(44);
-	.bottom(50);
+	.bottom(40);
 	.main{
 		.w(375);
 		.m-title{
@@ -169,6 +180,7 @@ import Lunbo from './lunbo'
 			// align-items: center;
 			width: 100%;
 			overflow-x:auto;
+			.margin(10,0,0,0);
 			dl{
 				width: 50%;
 				text-align: center;

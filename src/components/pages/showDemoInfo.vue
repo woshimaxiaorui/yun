@@ -47,11 +47,11 @@
 		},
 		computed: {
 			showUrl(){
-				console.log(this)
+				// console.log(this)
 				return this.$route.params
 			},
 			stateUrl(){
-				console.log("seturl",this.$store.state.aboutIframe.iframUrl.href)
+				// console.log("seturl",this.$store.state.aboutIframe.iframUrl.href)
 				return this.$store.state.aboutIframe.iframUrl.href;
 			}
 		},
