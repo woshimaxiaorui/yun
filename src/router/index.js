@@ -50,9 +50,9 @@ export default new Router({
 			name : 'ShowDemoInfo',
 			component : ShowDemoInfo,
 			beforeEnter: (to, from, next) => {
-          console.log('独享守卫')
-          console.log(to)
-          console.log(from)
+          // console.log('独享守卫')
+          // console.log(to)
+          // console.log(from)
           next()
       }
 		},
