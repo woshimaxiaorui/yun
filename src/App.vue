@@ -14,7 +14,8 @@
 	}
 </script>
 
-<style>
+<style lang="less">
+	@import '~style/index.less';
 	#app {
 		/* font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;

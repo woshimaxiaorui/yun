@@ -10,7 +10,7 @@ import Axios from 'axios'
 Vue.prototype.$axios = Axios
 
 Vue.config.productionTip = false
-Vue.use(VueAwesomeSwiper,Axios)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
