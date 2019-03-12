@@ -3,7 +3,7 @@
 	<div class="show-demo">
 		<div class="showdemo-head">
 			<p class="goUp" @click="goBack()">
-				《 返回
+				<span class="iconfont icon-ffanhui-" style="font-size:30px"></span>
 			</p>
 			<!-- <p  class="logo">
 				<img src="../../assets/img/logoBottom.png" alt="">

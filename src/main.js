@@ -9,7 +9,7 @@ import 'swiper/dist/css/swiper.css'
 import Axios from 'axios'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
-
+import '../static/iconfont/iconfont.css'
  
 
 Vue.use(MintUI)

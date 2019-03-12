@@ -146,7 +146,7 @@ export default {
 	position: fixed;
 	.w(375);
 	.top(44);
-	.bottom(50);
+	.bottom(40);
 	overflow:hidden;
 	background:@bg-color;
 	.content{

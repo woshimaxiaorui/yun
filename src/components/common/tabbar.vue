@@ -1,7 +1,7 @@
 <template>
 	<div class="tabbar">
 		<router-link v-for='(item,index) in tabs' :key='index' :to='item.path' tag='div' active-class='selected'>
-		<span>{{item.text}}</span>
+		<span :class="item.cl"></span>
 		</router-link>
 	</div>
 </template>
@@ -14,22 +14,26 @@
 					{
 						path:'/home/index',
 						name:'Index',
-						text:'首页'
+						text:'首页',
+						cl:'iconfont icon-shouye'
 					},
 					{
 						path:'/home/classificationShow',
 						name:'ClassificationShow',
-						text:'分类'
+						text:'分类',
+						cl:'iconfont icon-fenlei'
 					},
 					{
 						path:'/home/ourServes',
 						name:'OurSever',
-						text:'服务'
+						text:'服务',
+						cl:'iconfont icon-servicenum'
 					},
 					{
 						path:'/home/contactUs',
 						name:'ContactUs',
-						text:'留言'
+						text:'留言',
+						cl:'iconfont icon-liuyan'
 					}
 				]
 			};
@@ -52,6 +56,9 @@
 		.b-radio4(5,5,0,0);
 		background: @hd-color;
 		color: @bg-color;
+		span{
+			font-size:22px;
+		}
 	}
 	.selected{
 		color: yellow;
