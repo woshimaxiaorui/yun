@@ -38,18 +38,18 @@
 </script>
 
 <style lang="less">
-	@import '../../common/style/index.less';
+	@import '~style/index.less';
 	.tabbar{
 		position: fixed;
 		.bottom(0);
-		width:100%;
-		.h(50);
-		border-top:1px solid #ccc;
+		.w(375);
+		.h(40);
+		
 		display:flex;
 		justify-content: space-around;
-		font-size:@f-size-l;
-		.line-h(50);
-		.b-radio(10);
+		font-size:@f-size-m;
+		.line-h(40);
+		.b-radio4(5,5,0,0);
 		background: @hd-color;
 		color: @bg-color;
 	}
