@@ -67,7 +67,7 @@
 						list.splice(i,1);
 						localStorage.setItem('cmts',JSON.stringify(list));
 						this.list = list;
-						console.log(this.list)
+						// console.log(this.list)
 					}
 				}
 				

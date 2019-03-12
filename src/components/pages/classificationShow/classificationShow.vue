@@ -50,7 +50,7 @@
 			this.$axios.get(groupdatarUrl).then((resObj) => {
 				this.$nextTick(() => {
 					this.groupList = resObj.data;
-					console.log("",this.groupList)
+					// console.log("",this.groupList)
 				})
 			})
 		},
@@ -69,7 +69,7 @@
 		},
 		methods :{
 			showDemo(href){
-				console.log(href)
+				// console.log(href)
 				this.$router.push({
 					name : 'ShowDemoInfo',
 					params : {
