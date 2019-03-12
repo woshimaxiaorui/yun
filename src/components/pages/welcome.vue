@@ -45,14 +45,15 @@
 		}
 
 		.shouye {
-			.w(200px);
-			.h(50px);
-			.line-h(50px);
+			.w(150px);
+			.h(40px);
+			.line-h(40px);
 			position: fixed;
 			bottom: 15%;
-			left: 23%;
+			left: 50%;
+			.margin(0,0,0,-75);
 			background: rgba(0, 0, 0, .1);
-			font-size: @f-size-l;
+			font-size: @f-size-m;
 			color: rgba(255, 255, 255, 0.9);
 			border: 2px solid #666;
 			text-align: center;

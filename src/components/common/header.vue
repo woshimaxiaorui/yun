@@ -21,18 +21,17 @@
 </script>
 
 <style lang="less">
-	@import '../../common/style/index.less';
+	@import '~style/index.less';
 	.head{
 		position: fixed;
 		.top(0);
-		width:100%;
+		.w(375);
 		.h(44);
 		background:@hd-color;
 		display: flex;
 		justify-content: space-between;
 		font-size: @f-size-l;
 		.line-h(44);
-		.b-radio(5);
 		z-index: 10;
 // 		.goUp{
 // 			.w(20);
@@ -49,5 +48,5 @@
 			}
 		}
 	}
-	*{}
+	
 </style>
