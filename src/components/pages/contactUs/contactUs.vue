@@ -67,7 +67,7 @@
 						list.splice(i,1);
 						localStorage.setItem('cmts',JSON.stringify(list));
 						this.list = list;
-						console.log(this.list)
+						// console.log(this.list)
 					}
 				}
 				
@@ -103,7 +103,7 @@
 				input{ .h(20); border: 1px solid #999; background: rgba(255,255,255,0.3);}
 			}
 			.cu-btn{ 
-				span{ .w(75); .h(28); background: #0454F6; color: #fff; float: right; font-size: @f-size-s; text-align: center; .line-h(28);}
+				span{ .w(75); .h(28); background: @hd-color; color: #fff; float: right; font-size: @f-size-s; text-align: center; .line-h(28);}
 			}
 		}
 		.cu-info{

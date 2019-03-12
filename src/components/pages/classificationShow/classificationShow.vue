@@ -21,7 +21,6 @@
 					<dt>-- {{item.title}} --</dt>
 					<dd>
 						<div class="demo" v-for=" (it,i) in groupList[index].list" :key="i">
-							
 							<p class="it-img" @click="showDemo(it.href)">
 								<img :src=" '../../../static/img/' + it.img" :alt="it.name">
 							</p>
@@ -51,7 +50,7 @@
 			this.$axios.get(groupdatarUrl).then((resObj) => {
 				this.$nextTick(() => {
 					this.groupList = resObj.data;
-					console.log("",this.groupList)
+					// console.log("",this.groupList)
 				})
 			})
 		},
@@ -70,7 +69,7 @@
 		},
 		methods :{
 			showDemo(href){
-				console.log(href)
+				// console.log(href)
 				this.$router.push({
 					name : 'ShowDemoInfo',
 					params : {
@@ -92,7 +91,7 @@
 		width:100%;
 		position: fixed;
 		.top(44);
-		.bottom(50);
+		.bottom(44);
 		.padding(0,0,5,0);
 		.group{
 			overflow-x: auto;
@@ -133,6 +132,7 @@
 							.margin(0,0,10,0);
 							border: 2px solid #CCCCCC;
 							.padding(8,8,0,8);
+							box-shadow:0 5px 10px #e2e2e2;
 							.it-img{
 								img{
 									.w(150);

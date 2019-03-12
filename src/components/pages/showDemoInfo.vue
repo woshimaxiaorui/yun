@@ -11,7 +11,7 @@
 		</div>
 		<div class="show-iframe">
 			<p class="showload" v-if="showLoadding">
-				正在请求数据
+				<img src="../../../static/img/timg.gif" alt="">
 			</p>
 			<iframe ref="myIframe" :src="stateUrl" frameborder="0"></iframe>
 		</div>
@@ -71,6 +71,11 @@
 				position: fixed;
 				.top(40);
 				.bottom(0);
+				.w(375);
+				img{
+					width: 100%;
+					height: 100%;
+				}
 			}
 			iframe{
 				.w(375);
