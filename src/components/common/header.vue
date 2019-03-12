@@ -33,6 +33,7 @@
 		font-size: @f-size-l;
 		.line-h(44);
 		.b-radio(5);
+		z-index: 10;
 // 		.goUp{
 // 			.w(20);
 // 			.padding(0,10,0,10);

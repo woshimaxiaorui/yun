@@ -8,7 +8,7 @@
             <img :src="item.picUrl" class="b-img">
         </swiper-slide>
         <!-- Optional controls -->
-        <div class="swiper-pagination"  slot="pagination"></div>
+        <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
         <!-- <div class="swiper-button-prev" slot="button-prev"></div> -->
         <!-- <div class="swiper-button-next" slot="button-next"></div> -->
         <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
@@ -32,7 +32,10 @@ export default {
                 delay: 3000,
                 stopOnLastSlide: false,
                 disableOnInteraction: false,
-                }
+                },
+                effect : 'coverflow',
+                slidesPerView: 3,
+                centeredSlides: true,
             }
         }
     },
@@ -56,7 +59,7 @@ export default {
     //    .catch(err=>{
     //        console.log(err)
     //    })
-        let url = '../../../static/data/indexbanner.json';
+        let url = '../../../static/data/indexbanner1.json';
         this.$axios.get(url)
             .then(response=>{
                 this.list = response.data
@@ -78,14 +81,14 @@ export default {
     }
 }
 </script>
-<style lang='less'>
+<style lang='less' scoped>
 @import '~style/index.less';
 .swiper-container{
     .w(375);
-    .h(150);
+    .h(100);
     .b-img{
-       .w(375);
-       .h(150) 
+       .w(150);
+       .h(100) 
     }
     .swiper-pagination{
         .swiper-pagination-bullet{
