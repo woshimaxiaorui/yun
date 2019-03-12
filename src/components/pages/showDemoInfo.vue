@@ -13,7 +13,7 @@
 			<p class="showload" v-if="showLoadding">
 				正在请求数据
 			</p>
-			<iframe ref="myIframe" :src="showUrl.href" frameborder="0"></iframe>
+			<iframe ref="myIframe" :src="stateUrl" frameborder="0"></iframe>
 		</div>
 	</div>
 </template>
@@ -29,19 +29,30 @@
 		methods:{
 			goBack(){
 				this.$router.go(-1);
+			},
+			saveUrlStore(){
+				this.$store.commit('saveIframeUrl',this.$route.params);
+				// console.log("????",this.$store.state.aboutIframe.iframUrl.href)
 			}
 		},
 		mounted(){
-			console.log(this.$refs.myIframe)
+			this.$refs.myIframe.src = this.$store.state.aboutIframe.iframUrl.href;
+			this.$refs.myIframe.contentWindow.location.reload(true);
 			this.$refs.myIframe.onload = ()=>{
-				console.log(11111);
+				// console.log(11111);
 				this.showLoadding = false;
 			}
+			this.saveUrlStore();
+			
 		},
 		computed: {
 			showUrl(){
-				console.log(this.$route.params)
+				console.log(this)
 				return this.$route.params
+			},
+			stateUrl(){
+				console.log("seturl",this.$store.state.aboutIframe.iframUrl.href)
+				return this.$store.state.aboutIframe.iframUrl.href;
 			}
 		},
 	}
@@ -51,7 +62,6 @@
 	@import '~style/index.less';
 	.show-demo{
 		height:100%;
-		
 		.show-iframe{
 			position: fixed;
 			height: 100%;

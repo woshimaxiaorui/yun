@@ -1,10 +1,19 @@
 <template>
 	<div class="classification-show">
-		<div class="group">
+		<!-- <div class="group">
 			<p v-for="(item,index) in groupList" :key="index">
 				{{item.title}}
 			</p>
-		</div>
+			<p>
+				城市
+			</p>
+			<p>
+				校园
+			</p>
+			<p>
+				房产
+			</p>
+		</div> -->
 		<div class="wrapper">
 			<div class="content">
 				
@@ -78,7 +87,7 @@
 
 <style lang="less">
 	@import '~style/index.less';
-
+	*{}
 	.classification-show {
 		width:100%;
 		position: fixed;
@@ -86,6 +95,7 @@
 		.bottom(50);
 		.padding(0,0,5,0);
 		.group{
+			overflow-x: auto;
 			background:@other-color;
 			.h(43);
 			display: flex;

@@ -10,26 +10,27 @@
 				"name": "山城重庆",
 				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=8be9ebe474312980e1b6d6505646f5f4"
 			},
+
 			{
-					"img": "xianxidong.png",
-					"name": "仙栖洞",
-					"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=df0aceb5b03d24ab61cec7b2f9ecca8b"
-				},
-				{
-					"img": "chongqing.jpg",
-					"name": "山城重庆",
-					"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=8be9ebe474312980e1b6d6505646f5f4"
-				},
-				{
-						"img": "xianxidong.png",
-						"name": "仙栖洞",
-						"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=df0aceb5b03d24ab61cec7b2f9ecca8b"
-					},
-					{
-						"img": "chongqing.jpg",
-						"name": "山城重庆",
-						"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=8be9ebe474312980e1b6d6505646f5f4"
-					}
+				"img": "chongqing.jpg",
+				"name": "山城重庆",
+				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=8be9ebe474312980e1b6d6505646f5f4"
+			},
+			{
+				"img": "xianxidong.png",
+				"name": "仙栖洞",
+				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=df0aceb5b03d24ab61cec7b2f9ecca8b"
+			},
+			{
+				"img": "xianxidong.png",
+				"name": "仙栖洞",
+				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=df0aceb5b03d24ab61cec7b2f9ecca8b"
+			},
+			{
+				"img": "chongqing.jpg",
+				"name": "山城重庆",
+				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=8be9ebe474312980e1b6d6505646f5f4"
+			}
 
 		]
 	},
@@ -40,31 +41,24 @@
 				"name": "天安门",
 				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=885a7aee7bfd4ac045a63735de345a71"
 			},
+
 			{
 				"img": "wuxing.jpg",
 				"name": "五星峡谷",
 				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=65c84800f9f0eda7e4620b759bc6d3d4"
 			},
 			{
-					"img": "tiananmen.jpg",
-					"name": "天安门",
-					"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=885a7aee7bfd4ac045a63735de345a71"
-				},
-				{
-					"img": "wuxing.jpg",
-					"name": "五星峡谷",
-					"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=65c84800f9f0eda7e4620b759bc6d3d4"
-				},
-				{
-						"img": "tiananmen.jpg",
-						"name": "天安门",
-						"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=885a7aee7bfd4ac045a63735de345a71"
-					},
-					{
-						"img": "wuxing.jpg",
-						"name": "五星峡谷",
-						"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=65c84800f9f0eda7e4620b759bc6d3d4"
-					}
+				"img": "wuxing.jpg",
+				"name": "五星峡谷",
+				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=65c84800f9f0eda7e4620b759bc6d3d4"
+			},
+
+			{
+				"img": "tiananmen.jpg",
+				"name": "天安门",
+				"href": "http://www.yunjing720.com/index.php?s=tour/index/index&tid=885a7aee7bfd4ac045a63735de345a71"
+			}
+
 		]
 	}
 ]
