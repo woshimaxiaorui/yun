@@ -10,8 +10,9 @@ import Axios from 'axios'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '../static/iconfont/iconfont.css'
- 
+import animated from 'animate.css'
 
+Vue.use(animated)
 Vue.use(MintUI)
 Vue.prototype.$axios = Axios
 
