@@ -2,20 +2,13 @@
 	<div class="welcome">
 		<iframe src="http://www.yunjing720.com/index.php?s=tour/banner/index&tid=41bd5bb46ac156eddedbd107c58ddf89"
 		 frameborder="0"></iframe>
-		 <div class='filter'>
-			 <!-- <button @click="ishow">hide/show</button> -->
 			 <transition-group
 			enter-active-class = "animated fadeInDown"
+			class='filter'
 			>
 				<div class="hello1" v-show="showOne" :key='1'>Hello</div>
 				<div class="hello" v-show="showTwo" :key='2'>欢迎来到云景中国</div>	
 			</transition-group>
-			<!-- <transition
-			enter-active-class = "animated fadeInDown"
-			>
-					
-			</transition> -->
-		 </div>
 		 
 		<router-link :to='toIndex' tag='div' class='shouye'>
 			开启全景世界
@@ -92,34 +85,24 @@
 			.b-radio(5);
 		}
 		.filter{
-			position:fixed;
-			.top(100);
-			left:0;
-			bottom:0;
-			right:0;
-			margin:0 auto;
-			width:80%;
-			height:60%;
-			// background:#fff;
-			.padding(120,0,0,0);
 			.hello1{
+				position:fixed;
+				.top(250);
+				.left(150);
 				color:#fff;
-				.w(50);
 				margin:0 auto;
 				display:block;
-				width:100%;
 				text-align:center;
 				white-space:nowrap;
 				font-family:'Times New Roman';
 				font-size:30px;
 			}
 			.hello{
-				.padding(20,0,0,0);
+				position:fixed;
+				.top(300);
+				.left(50);
 				color:#fff;
-				.w(50);
-				margin:0 auto;
 				display:block;
-				width:100%;
 				text-align:center;
 				white-space:nowrap;
 				font-family:'楷体';
