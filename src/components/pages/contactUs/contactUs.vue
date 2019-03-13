@@ -93,7 +93,7 @@
 	}
 </script>
 
-<style lang="less" scope>
+<style lang="less" scoped>
 	@import '~style/index.less';
 	.contact-us{ position: fixed; .top(44); .right(0); .bottom(50); .left(0);
 		li{list-style: none;}

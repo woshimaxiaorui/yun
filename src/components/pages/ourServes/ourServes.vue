@@ -89,8 +89,9 @@
 	    				<li
 	    				v-for="(item,index) in zsList"
 	    				:key="index"
+	    				@click="open(index,$event)"
 	    				>
-	    					<img :src="item.photo"/>
+	    				   <img :src="item.photo"/>
 	    				</li>
 	    			</ul>
 	    		</div>
@@ -98,6 +99,13 @@
 	    			<img src="static/img/ourservesdt.png" alt="" />
 	    		</div>
 	    	</div>
+	    	
+	    		<div class="showhide" v-show="showflag" >
+	    			<div class="showbox">
+	    				<p @click="close">关闭</p>
+	    				<img :src="showImage"  />
+	    			</div>
+	    		</div>
 	    </div>
 	</div>
 </template>
@@ -130,12 +138,27 @@ export default {
 			    {photo:'static/img/ourserveshonor2.png'},
 			    {photo:'static/img/ourserveshonor3.png'},
 			    {photo:'static/img/ourserveshonor4.png'}
-			]
-		};
+			],
+			showflag:false,
+			showImage:''
+		}
+	},
+	methods:{
+		open(index,event){
+			this.showflag=true;
+			this.showimg(index)
+		},
+		close(){
+			this.showflag=false;
+		},
+		showimg(index){
+			this.showImage = this.zsList[index].photo;
+		}
 	},
 	mounted(){
 		let elobj = this.$refs.wrapper;
-		new BScroll(elobj);
+		new BScroll(elobj,{click:true});
+		
 	}
 }
 </script>
@@ -153,6 +176,7 @@ export default {
 		.banner{
 			.w(375);
 			.h(80);
+			position: fixed;
 			background:blue;
 			img{
 				width:100%;
@@ -332,10 +356,33 @@ export default {
 			.h(100);
 		}
 	}
-/*	{
-	 border-bottom: 5px solid rgba(4,84,246,1);
-    transition: 0.5s;
-    transform: translateY(-20px);
-	}*/
+	.showhide{
+		width: 100%;
+		height: 100%;
+		background:rgba(0, 0, 0, 0.4);
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: 999;
+        .showbox{
+			position: absolute;
+			.bottom(100);
+			.left(38);
+			.w(300);
+			.h(450);
+			p{
+				font-size:@f-size-l;
+				.h(30);
+				.line-h(30);
+				color:#fff;
+				text-align: center;
+			}
+			img{
+				.w(300);
+			    .h(420);
+			}
+        }
+
+	}
 }
 </style>

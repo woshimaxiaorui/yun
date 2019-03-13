@@ -91,7 +91,7 @@
 		width:100%;
 		position: fixed;
 		.top(44);
-		.bottom(44);
+		.bottom(40);
 		.padding(0,0,5,0);
 		.group{
 			overflow-x: auto;
