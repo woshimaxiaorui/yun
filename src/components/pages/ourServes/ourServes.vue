@@ -99,13 +99,12 @@
 	    			<img src="static/img/ourservesdt.png" alt="" />
 	    		</div>
 	    	</div>
-	    	
-	    		<div class="showhide" v-show="showflag" >
-	    			<div class="showbox">
-	    				<p @click="close">关闭</p>
-	    				<img :src="showImage"  />
-	    			</div>
-	    		</div>
+    		<div class="showhide" v-show="showflag" >
+    			<div class="showbox">
+    				<p @click="close">关闭</p>
+    				<img :src="showImage"  />
+    			</div>
+    		</div>
 	    </div>
 	</div>
 </template>
@@ -176,7 +175,6 @@ export default {
 		.banner{
 			.w(375);
 			.h(80);
-			position: fixed;
 			background:blue;
 			img{
 				width:100%;
@@ -382,7 +380,6 @@ export default {
 			    .h(420);
 			}
         }
-
 	}
 }
 </style>
