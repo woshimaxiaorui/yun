@@ -22,7 +22,7 @@
 					<dd>
 						<div class="demo" v-for=" (it,i) in groupList[index].list" :key="i">
 							<p class="it-img" @click="showDemo(it.href)">
-								<img :src=" '../../../static/img/' + it.img" :alt="it.name">
+								<img :src=" 'static/img/' + it.img" :alt="it.name">
 							</p>
 							<p class="it-name">
 								{{it.name}}
@@ -46,7 +46,7 @@
 			};
 		},
 		created(){
-			let groupdatarUrl = "../../../../static/data/groupData.json";
+			let groupdatarUrl = "static/data/groupData.json";
 			this.$axios.get(groupdatarUrl).then((resObj) => {
 				this.$nextTick(() => {
 					this.groupList = resObj.data;

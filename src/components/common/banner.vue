@@ -56,7 +56,7 @@ export default {
     //    .catch(err=>{
     //        console.log(err)
     //    })
-        let url = '../../../static/data/indexbanner.json';
+        let url = 'static/data/indexbanner.json';
         this.$axios.get(url)
             .then(response=>{
                 this.list = response.data

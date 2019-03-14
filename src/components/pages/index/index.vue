@@ -75,7 +75,7 @@
 				</div>
 				<div class="y-video">
 					<div class="y-con">
-						<img src="../../../../static/img/bofang.svg" v-show="videoshow" @touchstart="videoclick">
+						<img src="static/img/bofang.svg" v-show="videoshow" @touchstart="videoclick">
 						<video class="video-show" autobuffer autoloop loop controls ref="videos">
 							<source src="http://www.yunjing720.com/themes/yunjing720/public/assets/video/yunjing720.mp4">
 						</video>
